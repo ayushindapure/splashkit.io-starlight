@@ -1,7 +1,16 @@
 [
-  "getting-started",
+  "Camera",
+  "Graphics",
+  "animations",
+  "audio",
+  "beyond-splashkit",
+  "color",
+  "input",
   "interface",
+  "json",
   "networking",
   "physics",
-  "raspberry-gpio"
+  "raspberry-gpio",
+  "resources",
+  "utilities"
 ]
