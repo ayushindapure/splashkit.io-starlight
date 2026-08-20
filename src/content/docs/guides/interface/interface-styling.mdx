@@ -22,7 +22,7 @@ SplashKit comes with a few preset styles that make it easy to start customizing 
 <TabItem label="C++">
 
 ```cpp ins={8}
-# include "splashkit.h"
+#include "splashkit.h"
 
 int main()
 {
@@ -141,7 +141,7 @@ set_interface_style(InterfaceStyle.shaded_light_style)
 while (not quit_requested()):
     process_events()
 
-    clear_screen_to_white()
+    clear_screen(color_white())
 
     button_at_position("My Button!", rectangle_from(300, 260, 200, 24))
     
@@ -223,6 +223,26 @@ for instance, `set_interface_style(SHADED_DARK_STYLE , hsb_color(0.6, 0.4, 1.0))
         </td>
     </tr>
 </table>
+
+To use a tinted preset in your own code, simply pass the color as a second argument:
+
+<Tabs syncKey="code-language">
+<TabItem label="C++">
+```cpp
+set_interface_style(SHADED_DARK_STYLE, hsb_color(0.6, 0.4, 1.0));
+```
+</TabItem>
+<TabItem label="C#">
+```csharp
+SetInterfaceStyle(InterfaceStyle.ShadedDarkStyle, HsbColor(0.6f, 0.4f, 1.0f));
+```
+</TabItem>
+<TabItem label="Python">
+```python
+set_interface_style(InterfaceStyle.shaded_dark_style, hsb_color(0.6, 0.4, 1.0))
+```
+</TabItem>
+</Tabs>
 
 ### Custom Styles
 
@@ -309,6 +329,10 @@ set_interface_font_size(12)
 </TabItem>
 </Tabs>
 
+:::tip[Font Availability]
+Always ensure the font file exists in your working directory, or use `has_font()` to check before loading to avoid runtime errors.
+:::
+
 As mentioned in the previous section, you can also adjust the color of text with the following:
 
 - [Set Interface Text Color](/api/interface/#set-interface-text-color), changes the color of text _inside panels/elements_
@@ -319,6 +343,61 @@ As mentioned in the previous section, you can also adjust the color of text with
 You can adjust the space given for labels with [Set Interface Label Width](/api/interface/#set-interface-label-width) - if your labels are being cut short, try increasing this from its default of 60!
 
 You can also adjust the general spacing and padding in the interface using [Set Interface Spacing](/api/interface/#set-interface-spacing).
+
+## Part 4: Dynamic Theme Switching
+
+Sometimes you want to let players choose their preferred interface look – dark, light, or even custom colours – **at runtime**. SplashKit makes this easy.
+
+### Basic approach
+
+Just call `set_interface_style()` with the new preset whenever the user triggers a change (e.g., pressing a key or selecting from a dropdown).
+
+<Tabs syncKey="code-language">
+<TabItem label="C++">
+
+```cpp
+if (key_typed(D_KEY))
+    set_interface_style(SHADED_DARK_STYLE);
+if (key_typed(L_KEY))
+    set_interface_style(SHADED_LIGHT_STYLE);
+```
+
+</TabItem>
+<TabItem label="C#">
+
+```csharp
+if (KeyTyped(KeyCode.DKey))
+    SetInterfaceStyle(InterfaceStyle.ShadedDarkStyle);
+if (KeyTyped(KeyCode.LKey))
+    SetInterfaceStyle(InterfaceStyle.ShadedLightStyle);
+```
+
+</TabItem>
+<TabItem label="Python">
+
+```python
+if key_typed(D_KEY):
+    set_interface_style(InterfaceStyle.shaded_dark_style)
+if key_typed(L_KEY):
+    set_interface_style(InterfaceStyle.shaded_light_style)
+```
+
+</TabItem>
+</Tabs>
+
+### Advanced: store a custom theme
+
+If you’ve used the fine‑grained style functions (like `set_interface_color`, `set_interface_font_size`, etc.), you can save and re‑apply those settings:
+
+1. Define a struct (or class) to hold your theme data.
+2. When the user picks a theme, apply all settings from that struct.
+3. Optionally, use `reset_interface_style()` first to clear any previous customisations.
+
+This pattern is great for settings menus – combine it with `checkbox` and `dropdown` for a polished UX.
+
+:::tip
+Check out the [Interface Style Panel](/api/interface/#interface-style-panel) for experimenting with your own theme, then use the same values in your code.
+:::
 
 ## Wrap up
 

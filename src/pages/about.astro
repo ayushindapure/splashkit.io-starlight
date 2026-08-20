@@ -7,63 +7,93 @@ import os from "../assets/os.png";
 
 <html lang="en">
   <head>
-    <title>About Page</title>
+    <title>SplashKit — Build, Play, Innovate</title>
   </head>
   <body class="bg-white text-gray-800 font-sans">
-    {/* ========== HEADER ========== */}
+    {/* ========== AMBIENT BACKGROUND GLOW ========== */}
     <div aria-hidden="true" class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-        <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"></div>
+        <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-amber-300 via-orange-200 to-teal-300 opacity-40 sm:left-[calc(50%-30rem)] sm:w-288.75"></div>
       </div>
 
       <!-- Navbar -->
-<header class="flex flex-wrap lg:justify-start lg:flex-nowrap z-50 w-full py-7">
-    <nav class="relative max-w-7xl w-full flex flex-wrap lg:grid lg:grid-cols-12 basis-full items-center px-4 md:px-6 lg:px-8 mx-auto">
+<header class="flex flex-wrap lg:justify-start lg:flex-nowrap z-50 w-full py-4 border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0">
+    <nav class="relative max-w-7xl w-full flex flex-wrap lg:grid lg:grid-cols-12 basis-full items-center gap-y-3 px-4 md:px-6 lg:px-8 mx-auto">
+
+      {/* Logo */}
       <div class="lg:col-span-3 flex items-center">
-        {/* Logo */}
-        <a class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-hidden focus:opacity-80" href="index.html" aria-label="Preline">
-          <img class="h-10" src="https://splashkit.io/_astro/favicon.ByGd77Wa.svg" alt="">
+        <a class="flex-none flex items-center gap-x-2 rounded-xl text-xl inline-flex font-semibold focus:outline-hidden focus:opacity-80" href="/" aria-label="SplashKit">
+          <img class="h-9 w-9" src="https://splashkit.io/_astro/favicon.ByGd77Wa.svg" alt="">
+          <span class="text-xl font-bold text-blue-600">SplashKit</span>
         </a>
-        {/* End Logo */}
-  
-        <div class="ms-1 sm:ms-2">
-  
-        </div>
       </div>
-  
+      {/* End Logo */}
+
+      {/* Search */}
+      <div class="order-3 lg:order-2 w-full lg:w-auto lg:col-span-6 flex justify-center px-0 lg:px-5">
+        <label class="relative w-full max-w-md group">
+          <span class="sr-only">Search documentation</span>
+          <span class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+          <input
+            type="text"
+            placeholder="Search"
+            class="w-full rounded-xl border border-gray-200 bg-white py-2 pl-9 pr-12 text-sm text-gray-700 placeholder-gray-400 shadow-sm transition focus:border-yellow-500 focus:outline-hidden focus:ring-2 focus:ring-yellow-500/30"
+          />
+          <kbd class="pointer-events-none absolute inset-y-0 right-2 my-auto hidden h-5 select-none items-center rounded-md border border-gray-200 px-1.5 font-mono text-[10px] font-medium text-gray-400 sm:flex">/</kbd>
+        </label>
+      </div>
+      {/* End Search */}
+
       {/* Button Group */}
-      <div class="flex items-center gap-x-1 lg:gap-x-2 ms-auto py-1 lg:ps-6 lg:order-3 lg:col-span-3"> 
-        <a href="https://www.youtube.com/@splashkit7674" type="button" class="size-9.5 relative flex justify-center items-center rounded-xl bg-white border border-gray-200 text-black hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none ">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+      <div class="order-2 lg:order-3 flex items-center gap-x-1 lg:gap-x-2 ms-auto lg:ms-0 lg:col-span-3 lg:justify-end">
+        <a href="https://github.com/splashkit" type="button" aria-label="GitHub" class="size-9.5 relative p-3 flex justify-center items-center rounded-xl bg-white border border-gray-200 text-black hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github-icon lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
         </a>
-        <a href="https://github.com/splashkit" type="button" class="size-9.5 relative flex justify-center items-center rounded-xl bg-white border border-gray-200 text-black hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none ">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github-icon lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        <a href="https://www.youtube.com/@splashkit7674" type="button" aria-label="YouTube" class="size-9.5 p-3 relative flex justify-center items-center rounded-xl bg-white border border-gray-200 text-black hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
         </a>
-        <a href="/announcements"  type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium text-nowrap rounded-xl border border-transparent bg-yellow-500 text-black hover:bg-yellow-400 cursor-pointer focus:outline-hidden focus:bg-yellow-500 transition disabled:opacity-50 disabled:pointer-events-none">
+        <a href="/rss.xml" type="button" aria-label="RSS feed" class="size-9.5 relative hidden sm:flex p-3 justify-center items-center rounded-xl bg-white border border-gray-200 text-black hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+        </a>
+
+        <span class="mx-1 hidden h-6 w-px bg-gray-200 lg:block"></span>
+
+        <a href="/announcements" class="hidden lg:inline-block px-2 py-2 text-sm font-semibold text-blue-600 hover:text-blue-800 focus:outline-hidden transition">
           Announcements
         </a>
-  
+
+        {/* Theme toggle */}
+        <details class="relative hidden lg:block">
+          <summary class="list-none flex items-center gap-x-1.5 cursor-pointer select-none rounded-xl border border-gray-200 px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 focus:outline-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            <span data-theme-label>Light</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="absolute right-0 z-20 mt-2 w-32 rounded-xl border border-gray-200 bg-white p-1 shadow-lg">
+            <button type="button" data-theme-choice="light" class="w-full rounded-lg px-3 py-1.5 text-left text-sm text-gray-700 hover:bg-gray-100">Light</button>
+            <button type="button" data-theme-choice="dark" class="w-full rounded-lg px-3 py-1.5 text-left text-sm text-gray-700 hover:bg-gray-100">Dark</button>
+            <button type="button" data-theme-choice="system" class="w-full rounded-lg px-3 py-1.5 text-left text-sm text-gray-700 hover:bg-gray-100">System</button>
+          </div>
+        </details>
+        {/* End Theme toggle */}
+
         <div class="lg:hidden">
-          <button type="button" class="hs-collapse-toggle size-9.5 flex justify-center items-center text-sm font-semibold rounded-xl border border-gray-200 text-black hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none  -700 -neutral-700 -neutral-700" id="hs-pro-hcail-collapse" aria-expanded="false" aria-controls="hs-pro-hcail" aria-label="Toggle navigation" data-hs-collapse="#hs-pro-hcail">
+          <button type="button" class="hs-collapse-toggle size-9.5 flex justify-center items-center text-sm font-semibold rounded-xl border border-gray-200 text-black hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" id="hs-pro-hcail-collapse" aria-expanded="false" aria-controls="hs-pro-hcail" aria-label="Toggle navigation" data-hs-collapse="#hs-pro-hcail">
             <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
             <svg class="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
           </button>
         </div>
       </div>
       {/* End Button Group */}
-  
-      {/* Collapse */}
-      <div id="hs-pro-hcail" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow lg:block lg:w-auto lg:basis-auto lg:order-2 lg:col-span-6" aria-labelledby="hs-pro-hcail-collapse">
-        <div class="flex flex-col gap-y-4 gap-x-0 mt-5 lg:flex-row lg:justify-center lg:items-center lg:gap-y-0 lg:gap-x-7 lg:mt-0">
-          <div>
-            <a class="relative inline-block text-black focus:outline-hidden before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-yellow-500 " href="#" aria-current="page">Home</a>
-          </div>
-          <div>
-            <a href="/api" class="inline-block text-black hover:text-gray-600 focus:outline-hidden focus:text-gray-600  -neutral-300 -neutral-300 " href="#">Documentation</a>
-          </div>
-          <div>
-            <a href="/guides" class="inline-block text-black hover:text-gray-600 focus:outline-hidden focus:text-gray-600  -neutral-300 -neutral-300" href="#">Guides</a>
-          </div>
 
+      {/* Collapse (mobile only: site links + announcements + theme) */}
+      <div id="hs-pro-hcail" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow lg:hidden order-4 w-full" aria-labelledby="hs-pro-hcail-collapse">
+        <div class="flex flex-col gap-y-3 mt-4 border-t border-gray-100 pt-4">
+          <a class="text-black font-medium" href="/" aria-current="page">Home</a>
+          <a href="/api" class="text-black hover:text-gray-600">Documentation</a>
+          <a href="/guides" class="text-black hover:text-gray-600">Guides</a>
+          <a href="/announcements" class="text-blue-600 font-semibold">Announcements</a>
         </div>
       </div>
       {/* End Collapse */}
@@ -118,9 +148,16 @@ import os from "../assets/os.png";
                     </div>
                 </div>
 
+                {/* ========== HERO BACKGROUND ========== */}
                 <div class="absolute inset-0 -z-10 overflow-hidden">
-                    <canvas>module mockup added</canvas>
+                    {/* soft dot grid, faded toward the edges */}
+                    <div class="absolute inset-0 opacity-70 [background-image:radial-gradient(rgba(0,0,0,0.08)_1px,transparent_1px)] [background-size:22px_22px] [mask-image:radial-gradient(ellipse_65%_65%_at_30%_20%,#000_30%,transparent_75%)]"></div>
+                    {/* warm glow, top right */}
+                    <div class="absolute -top-16 right-[-6rem] h-[26rem] w-[26rem] rounded-full bg-linear-to-br from-yellow-300/50 via-orange-200/40 to-transparent blur-3xl"></div>
+                    {/* teal glow, bottom left */}
+                    <div class="absolute bottom-[-8rem] left-[-6rem] h-[24rem] w-[24rem] rounded-full bg-linear-to-tr from-teal-300/40 to-cyan-200/25 blur-3xl"></div>
                 </div>
+                {/* ========== END HERO BACKGROUND ========== */}
 
                 <div class="perspective-near mt-24 translate-x-12 md:absolute md:-right-6 md:bottom-16 md:left-1/2 md:top-40 md:mt-0 md:translate-x-0">
                     <div class="before:border-foreground/5 before:bg-foreground/5 relative h-full before:absolute before:-inset-x-4 before:bottom-7 before:top-0 before:skew-x-6 before:rounded-[calc(var(--radius)+1rem)] before:border">
@@ -171,7 +208,7 @@ import os from "../assets/os.png";
                   <svg class="text-primary w-5 h-5"><!-- Target icon --></svg>
                   <h3 class="mt-5 text-lg font-semibold text-foreground">Easy Integration</h3>
                   <p class="mt-3 text-sm text-muted-foreground">SplashKit SDK offers seamless integration with your existing development environment, making it easy to incorporate powerful graphics and game development capabilities into your projects.</p>
-                    <img src="https://imgs.search.brave.com/PBdyRCqHxcFIR-3T_VzWsKKZDlEIAvNQhdtWE44mrCA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4z/ZC5pY29uc2NvdXQu/Y29tLzNkL3ByZW1p/dW0vdGh1bWIvcHJl/c2VudGF0aW9uLWRl/c2lnbi1hcHAtM2Qt/aWxsdXN0cmF0aW9u/LWRvd25sb2FkLWlu/LXBuZy1ibGVuZC1m/YngtZ2x0Zi1maWxl/LWZvcm1hdHMtLW1h/a2luZy1zbGlkZS1w/cm90b3R5cGUtcGFj/ay1kZXZlbG9wbWVu/dC1pbGx1c3RyYXRp/b25zLTQ5NzEyMzMu/cG5n" alt="">
+                    <img src="https://imgs.search.brave.com/PBdyRCqHxcFIR-3T_VzWsKKZDlEIAvNQhdtWE44mrCA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4z/ZC5pY29uc2NvdXQu/Y29tLzNkL3ByZW1p/dW0vdGh1bWIvcHJl/c2VudGF0aW9uLWRl/c2lnbi1hcHAtM2Qt/aWxsdXN0cmF0aW9u/LWRvd25sb2FkLWlu/LXBuZy1ibGVuZC1m/YngtZ2x0Zi1maWxl/LWZvcm1hdHMtLW1h/a2luZy1zbGlkZS1w/cm90b3R5cGUtcGFj/ay1kZXZlbG9wbWVu/dC1pbGx1c3RyYXRpb25zLTQ5NzEyMzMu/cG5n" alt="">
                 </div>
           
                 <!-- Card 2: Intelligent Code Review -->
@@ -224,5 +261,32 @@ import os from "../assets/os.png";
     </main>
   </div>
   <Footer />
+
+  <script>
+    // Lightweight theme toggle: adds/removes a `dark` class on <html> and
+    // remembers the choice. Needs `darkMode: 'class'` (or 'selector') in
+    // tailwind.config plus `dark:` variants elsewhere to actually change look.
+    const root = document.documentElement;
+    const label = document.querySelector('[data-theme-label]');
+    const stored = localStorage.getItem('sk-theme') || 'system';
+
+    function applyTheme(choice) {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = choice === 'dark' || (choice === 'system' && prefersDark);
+      root.classList.toggle('dark', isDark);
+      if (label) label.textContent = choice === 'system' ? (isDark ? 'Dark' : 'Light') : (choice === 'dark' ? 'Dark' : 'Light');
+    }
+
+    applyTheme(stored);
+
+    document.querySelectorAll('[data-theme-choice]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const choice = btn.getAttribute('data-theme-choice');
+        localStorage.setItem('sk-theme', choice);
+        applyTheme(choice);
+        btn.closest('details')?.removeAttribute('open');
+      });
+    });
+  </script>
   </body>
 </html>
