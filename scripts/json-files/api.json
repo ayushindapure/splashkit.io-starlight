@@ -87781,8 +87781,8 @@
     ]
   },
   "timers": {
-    "brief": "Timers in SplashKit can be used to track the passing of time.",
-    "description": "",
+    "brief": "Timers in SplashKit can be used to measure elapsed time.",
+    "description": "Timers in SplashKit make it easy to measure elapsed time in games and apps. They are useful for countdowns, animation timing, and tracking how long a state has been active.",
     "functions": [
       {
         "signature": "timer create_timer(string name);",
@@ -87791,7 +87791,7 @@
         "unique_global_name": "create_timer",
         "unique_method_name": null,
         "suffix_name": null,
-        "description": "Create and return a new Timer. The timer will not be started, and will have\nan initial 'ticks' of 0.",
+        "description": "Create and return a new timer. A new timer is not started automatically and begins with 0 ticks.",
         "brief": null,
         "return": {
           "type": "timer",
@@ -87845,7 +87845,7 @@
         "unique_global_name": "free_all_timers",
         "unique_method_name": null,
         "suffix_name": null,
-        "description": "Free all of timers that have been created.",
+        "description": "Free all timers that have been created.",
         "brief": null,
         "return": {
           "type": "void",
@@ -87883,7 +87883,7 @@
         "unique_global_name": "free_timer",
         "unique_method_name": "timer.free",
         "suffix_name": null,
-        "description": "Free the memory used to store this timer.",
+        "description": "Free the memory used to store a timer.",
         "brief": null,
         "return": {
           "type": "void",
@@ -87896,7 +87896,7 @@
         "parameters": {
           "to_free": {
             "type": "timer",
-            "description": "The time to be released.",
+            "description": "The timer to release.",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
